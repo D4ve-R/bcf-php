@@ -14,18 +14,9 @@ class IndexProjectsRequest extends BaseRequest
     public function createDtoFromResponse(Response $response): array
     {
         $data = $response->json();
-
-        // is a list of projects
-        if (isset($data[0])) {
-            return array_map(function ($project) {
-                return new Project(
-                    name: $project['name'],
-                    project_id: $project['project_id'],
-                    authorization: $project['authorization'],
-                );
-            }, $data);
-        }
-
-        return [];
+        
+        return array_map(function ($project) {
+            return Project::fromArray($project);
+        }, $data);
     }
 }

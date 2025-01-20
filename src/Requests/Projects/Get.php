@@ -26,10 +26,6 @@ class GetProjectsRequest extends BaseRequest
     {
         $project = $response->json();
 
-        return new Project(
-            name: $project['name'],
-            project_id: $project['project_id'],
-            authorization: $project['authorization'],
-        );
+        return Project::fromArray($project);
     }
 }
