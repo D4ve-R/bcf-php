@@ -2,6 +2,23 @@
 
 namespace D4veR\BcfPhp\Data;
 
+class EventType {
+    public function __construct(
+        public readonly string $type,
+        public readonly string $value,
+    ) {
+        //
+    }
+
+    public static function fromArray(array $data): self
+    {
+        return new self(
+            type: $data['type'],
+            value: $data['value'],
+        );
+    }
+}
+
 class Event
 {
     public function __construct(
@@ -18,7 +35,7 @@ class Event
     {
         return new self(
             topic_guid: $data['topic_guid'],
-            events: $data['events'],
+            events: array_map(fn($event) => EventType::fromArray($event), $data['events']),
             date: $data['date'],
             author: $data['author'],
             comment_guid: $data['comment_guid'] ?? [],
