@@ -12,4 +12,13 @@ class Project
     ) {
         //
     }
+
+    public static function fromArray(array $data): self
+    {
+        return new self(
+            name: $data['name'],
+            project_id: $data['project_id'],
+            authorization: $data['authorization'] ?? null,
+        );
+    }
 }
