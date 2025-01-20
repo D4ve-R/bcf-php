@@ -2,7 +2,8 @@
 
 namespace D4veR\BcfPhp\Data;
 
-class EventType {
+class EventType
+{
     public function __construct(
         public readonly string $type,
         public readonly string $value,
@@ -35,7 +36,7 @@ class Event
     {
         return new self(
             topic_guid: $data['topic_guid'],
-            events: array_map(fn($event) => EventType::fromArray($event), $data['events']),
+            events: array_map(fn ($event) => EventType::fromArray($event), $data['events']),
             date: $data['date'],
             author: $data['author'],
             comment_guid: $data['comment_guid'] ?? [],

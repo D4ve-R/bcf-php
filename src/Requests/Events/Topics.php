@@ -16,7 +16,7 @@ class TopicsRequest extends BaseRequest
 
     public function resolveEndpoint(): string
     {
-        return parent::resolveEndpoint() . '/' . $this->topic_id . '/events';
+        return parent::resolveEndpoint().'/'.$this->topic_id.'/events';
     }
 
     public function createDtoFromResponse(Response $response): array
