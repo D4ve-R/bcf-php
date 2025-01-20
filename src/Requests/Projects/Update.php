@@ -6,7 +6,6 @@ use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Traits\Body\HasJsonBody;
 
-
 class UpdateProjectsRequest extends GetProjectsRequest implements HasBody
 {
     use HasJsonBody;

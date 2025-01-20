@@ -1,8 +1,6 @@
-<?php 
+<?php
 
 namespace D4veR\BcfPhp\Requests\Topics;
-
-use D4veR\BcfPhp\Data\Topic;
 
 use Saloon\Enums\Method;
 

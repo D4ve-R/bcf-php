@@ -3,7 +3,6 @@
 namespace D4veR\BcfPhp\Requests\Projects;
 
 use D4veR\BcfPhp\Data\ProjectExtensions;
-use Saloon\Enums\Method;
 use Saloon\Http\Response;
 
 class ExtensionsProjectsRequest extends BaseRequest
@@ -18,7 +17,7 @@ class ExtensionsProjectsRequest extends BaseRequest
 
     public function resolveEndpoint(): string
     {
-        return parent::resolveEndpoint() . '/' . $this->project_id . '/extensions';
+        return parent::resolveEndpoint().'/'.$this->project_id.'/extensions';
     }
 
     public function createDtoFromResponse(Response $response): ProjectExtensions

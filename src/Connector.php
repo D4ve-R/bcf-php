@@ -15,7 +15,7 @@ class Connector extends BaseConnector
 
     public function resolveBaseUrl(): string
     {
-        return $this->baseUrl . '/' . $this->bcfVersion;
+        return $this->baseUrl.'/'.$this->bcfVersion;
     }
 
     protected function defaultHeaders(): array

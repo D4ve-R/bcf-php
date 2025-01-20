@@ -3,7 +3,6 @@
 namespace D4veR\BcfPhp\Requests\Projects;
 
 use D4veR\BcfPhp\Data\Project;
-
 use Saloon\Enums\Method;
 use Saloon\Http\Response;
 
@@ -19,7 +18,7 @@ class GetProjectsRequest extends BaseRequest
 
     public function resolveEndpoint(): string
     {
-        return parent::resolveEndpoint() . '/' . $this->project_id;
+        return parent::resolveEndpoint().'/'.$this->project_id;
     }
 
     public function createDtoFromResponse(Response $response): Project

@@ -1,12 +1,10 @@
-<?php 
+<?php
 
 namespace D4veR\BcfPhp\Requests\Topics;
 
 use D4veR\BcfPhp\Data\Topic;
-
 use Saloon\Enums\Method;
 use Saloon\Http\Response;
-
 
 class GetTopicsRequest extends BaseRequest
 {
@@ -21,7 +19,7 @@ class GetTopicsRequest extends BaseRequest
 
     public function resolveEndpoint(): string
     {
-        return parent::resolveEndpoint() . '/' . $this->topic_id;
+        return parent::resolveEndpoint().'/'.$this->topic_id;
     }
 
     public function createDtoFromResponse(Response $response): Topic

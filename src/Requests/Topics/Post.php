@@ -1,9 +1,8 @@
-<?php 
+<?php
 
 namespace D4veR\BcfPhp\Requests\Topics;
 
 use D4veR\BcfPhp\Data\Topic;
-
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Traits\Body\HasJsonBody;

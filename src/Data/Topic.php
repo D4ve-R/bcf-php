@@ -2,7 +2,6 @@
 
 namespace D4veR\BcfPhp\Data;
 
-
 class Topic
 {
     public function __construct(

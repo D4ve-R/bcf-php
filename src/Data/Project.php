@@ -2,7 +2,6 @@
 
 namespace D4veR\BcfPhp\Data;
 
-
 class Project
 {
     public function __construct(
