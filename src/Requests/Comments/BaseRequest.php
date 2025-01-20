@@ -15,6 +15,6 @@ class BaseRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return '/projects/' . $this->project_id . '/topics/' . $this->topic_id . '/comments';
+        return '/projects/'.$this->project_id.'/topics/'.$this->topic_id.'/comments';
     }
 }
