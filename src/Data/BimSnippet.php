@@ -2,7 +2,8 @@
 
 namespace D4veR\BcfPhp\Data;
 
-class BimSnippet {
+class BimSnippet
+{
     public function __construct(
         public readonly string $reference,
         public readonly string $reference_schema,
