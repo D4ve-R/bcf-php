@@ -6,6 +6,7 @@ class Topic
 {
     public function __construct(
         public readonly string $guid,
+        public readonly ?string $server_assigned_id,
         public readonly string $title,
         public readonly string $creation_date,
         public readonly string $creation_author,
@@ -21,6 +22,7 @@ class Topic
         public readonly ?array $labels,
         public readonly ?array $reference_links,
         public readonly ?object $authorization = null,
+        public readonly ?BimSnippet $bim_snippet = null,
     ) {
         //
     }
@@ -29,6 +31,7 @@ class Topic
     {
         return new self(
             guid: $data['guid'],
+            server_assigned_id: $data['server_assigned_id'] ?? null,
             title: $data['title'],
             creation_date: $data['creation_date'],
             creation_author: $data['creation_author'],
@@ -44,6 +47,7 @@ class Topic
             labels: $data['labels'] ?? null,
             reference_links: $data['reference_links'] ?? null,
             authorization: $data['authorization'] ?? null,
+            bim_snippet: isset($data['bim_snippet']) ? BimSnippet::fromArray($data['bim_snippet']) : null,
         );
     }
 }
